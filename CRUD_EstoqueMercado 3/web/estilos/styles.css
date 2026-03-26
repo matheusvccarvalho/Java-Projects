@@ -1,0 +1,109 @@
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+    background-image: url('https://www.loja.shibata.com.br/assets/img/header-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    color: #004aad;
+    font-size: 32px;
+    padding: 100px 0 20px;
+}
+
+#formulario {
+    display: none;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    z-index: 1;
+}
+
+#formulario div {
+    margin-bottom: 16px;
+}
+
+#formulario label {
+    font-weight: bold;
+    color: #004aad;
+}
+
+#formulario input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#botoesIniciais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 30px auto;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+#botoesIniciais button {
+    flex: 1 1 40%;
+    background-color: #e30613;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#botoesIniciais button:hover {
+    background-color: #b1040f;
+    transform: scale(1.05);
+}
+
+/* Botão Voltar */
+#btnVoltar {
+    background-color: #004aad;
+    color: white;
+    padding: 15px 25px;
+    margin: 30px auto 0;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnVoltar:hover {
+    background-color: #002f6c;
+    transform: scale(1.05);
+}

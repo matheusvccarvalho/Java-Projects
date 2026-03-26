@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Controle de Estoque</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:25px;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+    color:#333;
+}
+
+/* BOTÕES */
+
+#botoesIniciais{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:25px;
+}
+
+button{
+    background:#c40000;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:4px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#9d0000;
+}
+
+/* FORMULÁRIO */
+
+#formulario{
+    width:520px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:6px;
+    box-shadow:0px 2px 8px rgba(0,0,0,0.15);
+}
+
+/* CAMPOS */
+
+form div{
+    margin-bottom:12px;
+}
+
+label{
+    font-weight:600;
+    font-size:14px;
+    color:#444;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin-top:4px;
+    border-radius:4px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#c40000;
+}
+
+/* BOTÃO ENVIAR */
+
+#botaoOperacao{
+    margin-top:10px;
+    width:100%;
+    background:#c40000;
+    color:white;
+    border:none;
+    padding:11px;
+    border-radius:4px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+#botaoOperacao:hover{
+    background:#9d0000;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+<h1>Controle de Estoque</h1>
+</header>
+
+
+<div id="botoesIniciais">
+
+<button onclick="mostrarFormulario('CADASTRAR')">Cadastrar</button>
+
+<button onclick="mostrarFormulario('DELETAR')">Deletar</button>
+
+<button onclick="mostrarFormulario('CONSULTAR_ID_ATUALIZAR')">Atualizar</button>
+
+<button onclick="mostrarFormulario('CONSULTAR_ID')">Consultar por ID</button>
+
+<button onclick="mostrarFormulario('CONSULTAR_CATEGORIA')">Consultar por Categoria</button>
+
+<button onclick="mostrarTodos()">Consultar Todos</button>
+
+</div>
+
+
+<div id="formulario">
+
+<form id="formCrud" action="CrudEstoque" method="POST">
+
+<input type="hidden" name="op" id="op">
+
+
+<div id="divId">
+<label>ID</label>
+<input type="text" name="txtid" id="txtid">
+</div>
+
+
+<div id="divNome">
+<label>Nome</label>
+<input type="text" name="txtnome">
+</div>
+
+
+<div id="divCategoria">
+<label>Categoria</label>
+<input type="text" name="txtcategoria">
+</div>
+
+
+<div id="divPreco">
+<label>Preço</label>
+<input type="text" name="txtpreco">
+</div>
+
+
+<div id="divDataValidade">
+<label>Data de Validade</label>
+<input type="date" name="txtdataValidade">
+</div>
+
+
+<div id="divPeso">
+<label>Peso</label>
+<input type="text" name="txtpeso">
+</div>
+
+
+<div id="divFornecedor">
+<label>Fornecedor</label>
+<input type="text" name="txtfornecedor">
+</div>
+
+
+<div id="divMarca">
+<label>Marca</label>
+<input type="text" name="txtmarca">
+</div>
+
+
+<div id="divCodigoBarra">
+<label>Código de Barra</label>
+<input type="text" name="txtcodigoDeBarra">
+</div>
+
+
+<div id="divQuantidade">
+<label>Quantidade</label>
+<input type="number" name="txtquantidade">
+</div>
+
+
+<div id="divSku">
+<label>SKU</label>
+<input type="text" name="txtsku">
+</div>
+
+
+<input type="submit" id="botaoOperacao" value="Enviar">
+
+</form>
+
+</div>
+
+
+<script src="js/ExibirEsconderFormulario.js"></script>
+
+</body>
+</html>

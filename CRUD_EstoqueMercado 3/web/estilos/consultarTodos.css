@@ -1,0 +1,102 @@
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 60px;
+    background-image: url('https://www.loja.shibata.com.br/assets/img/header-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 100px 0 20px;
+}
+
+#formulario {
+    display: none;
+    margin-top: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#formulario div {
+    margin-bottom: 15px;
+}
+
+#botoesIniciais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 30px auto;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#botoesIniciais button {
+    flex: 1 1 40%;
+    background-color: #ff3b3f;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#botoesIniciais button:hover {
+    background-color: #c42c30;
+    transform: scale(1.03);
+}
+
+/* ✅ Estilo do botão "Voltar ao Início" */
+#btnVoltar {
+    background-color: #6c757d;
+    color: white;
+    padding: 15px 25px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnVoltar:hover {
+    background-color: #5a6268;
+    transform: scale(1.03);
+}
