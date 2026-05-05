@@ -89,13 +89,7 @@ O projeto segue o padrão **MVC**:
 - 1 Produto → N Movimentações  
 
 ---
----
 
-### File Tree
-
- 
-
----
 
 ### ▶️ Como Executar
 
